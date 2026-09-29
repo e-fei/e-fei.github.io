@@ -16,10 +16,12 @@ redirect_from:
   {% if home.cv != '' %}<p><a href="{{ home.cv | relative_url }}">Download my CV</a></p>{% endif %}
 </div>
 
+{% if home.news.size > 0 %}
 <h2 id="news">News</h2>
 <div class="news-box"><ul class="news-list">
   {% for item in home.news %}<li><span class="news-date">{{ item.date | escape }}</span> {{ item.text | markdownify }}</li>{% else %}<li class="empty-copy">Updates coming soon.</li>{% endfor %}
 </ul></div>
+{% endif %}
 
 <h2 id="experience">Experience</h2>
 <div class="experience-container">
@@ -31,8 +33,8 @@ redirect_from:
   {% else %}<div class="experience-card empty-copy">Education and research experience will be added here.</div>{% endfor %}
 </div>
 
-<h2 id="publications">Publications</h2>
 {% if home.publications.size > 0 %}
+<h2 id="publications">Publications</h2>
 <div class="pub-button-container" role="group" aria-label="Publication filter">
   <button type="button" class="pub-button active" aria-pressed="true" data-filter="selected">Selected publications</button>
   <button type="button" class="pub-button" aria-pressed="false" data-filter="all">All publications</button>
@@ -46,12 +48,14 @@ redirect_from:
   </article>{% endfor %}
 </div>
 <p class="empty-copy" id="no-selected-publications" hidden>No selected publications yet. Choose “All publications” to see the full list.</p>
-{% else %}<p class="empty-copy">Publications will be added here.</p>{% endif %}
+{% endif %}
 
+{% if home.projects.size > 0 %}
 <h2 id="projects">Projects</h2>
 {% for item in home.projects %}
 <article class="project-card"><div class="project-details"><h3>{% if item.url %}<a href="{{ item.url | escape }}">{{ item.title | escape }}</a>{% else %}{{ item.title | escape }}{% endif %}</h3>{{ item.description | markdownify }}</div></article>
-{% else %}<p class="empty-copy">Research projects will be added here.</p>{% endfor %}
+{% endfor %}
+{% endif %}
 
 {% for section in home %}{% if section[0] == 'awards' or section[0] == 'services' or section[0] == 'talks' %}{% if section[1].size > 0 %}
 <h2 id="{{ section[0] }}">{{ section[0] | capitalize }}</h2><ul>{% for item in section[1] %}<li>{{ item | markdownify }}</li>{% endfor %}</ul>

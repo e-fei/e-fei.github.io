@@ -1,8 +1,8 @@
-# e-fei 的学术主页
+# 陆逸霏（Yifei Lu）的学术主页
 
 基于 [WowPage](https://github.com/oplisty/oplisty.github.io)，保留原模板侧栏、顶部导航、玫瑰色点缀和卡片布局。
 
-目标地址：https://e-fei.github.io/
+主页地址：https://e-fei.github.io/
 
 ## 修改资料
 
@@ -12,8 +12,9 @@
 - `_data/navigation.yml`：顶部导航。
 - `assets/css/home.css`：主页样式。
 
-填写真实信息后，把 `_config.yml` 中的 `profile_draft` 改为 `false`，让搜索引擎收录。
-当前只使用已提供的 GitHub 用户名，不包含模板原作者的个人经历、照片、论文或联系方式。
+当前已填写姓名、学校、视频生成研究方向、上海交通大学研究经历及三项竞赛获奖，并允许搜索引擎收录。
+未填写的新闻、论文和项目栏目自动隐藏；在 `_data/homepage.yml` 添加内容后会自动显示。
+头像目前使用姓名首字母，可在提供个人照片后替换。保留原模板署名，不包含模板原作者的个人经历、照片、论文或联系方式。
 
 ## 部署到 GitHub Pages
 

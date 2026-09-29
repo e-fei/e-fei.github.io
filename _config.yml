@@ -1,19 +1,19 @@
 locale                   : "en-US"
-title                    : "e-fei | Academic Homepage"
+title                    : "Yifei Lu | 陆逸霏"
 title_separator          : "-"
-name                     : "e-fei"
-description              : &description "Academic homepage of e-fei. Profile and research information coming soon."
+name                     : "Yifei Lu"
+description              : &description "Yifei Lu (陆逸霏), South China University of Technology. Research interests: video generation."
 url                      : "https://e-fei.github.io"
 baseurl                  : ""
 repository               : "e-fei/e-fei.github.io"
 
 author:
   avatar           : "avatar.svg"
-  name             : "e-fei"
+  name             : "Yifei Lu · 陆逸霏"
   pronouns         :
-  bio              : "Academic profile coming soon."
+  bio              : "Video Generation"
   location         :
-  employer         :
+  employer         : "South China University of Technology"
   uri              :
   email            :
 
@@ -273,4 +273,4 @@ compress_html:
     envs: development
 
 # Turn off after adding your real academic profile.
-profile_draft: true
+profile_draft: false

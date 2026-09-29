@@ -1,11 +1,23 @@
 # Edit the profile in _config.yml and your homepage content here.
-intro: "Welcome! This academic homepage is currently being prepared. Research interests, experience, and publications will be added soon."
-research_interests: []
+intro: >-
+  I am **Yifei Lu (陆逸霏)** from **South China University of Technology**.
+  My research focuses on **video generation**.
+  Since August 2026, I have been conducting research at **Shanghai Jiao Tong University**,
+  supervised by **Yanwei Li (李彦玮)**.
+research_interests:
+  - "Video Generation"
 news: []
-experience: []
+experience:
+  - institution: "Shanghai Jiao Tong University · 上海交通大学"
+    date: "Aug. 2026 – Present"
+    role: "Research Experience"
+    description: "Advisor: **Yanwei Li (李彦玮)**. Research area: video generation."
 publications: []
 projects: []
-awards: []
+awards:
+  - "**Jul. 2026** — **Second Prize, Southern Regional Division**, 全国大学生嵌入式大赛（南部赛区二等奖）."
+  - "**Feb. 2026** — **Honorable Mention**, 美国大学生数学建模竞赛（美赛）."
+  - "**Nov. 2025** — **Provincial Third Prize**, 全国大学生数学竞赛（省三等奖）."
 services: []
 talks: []
 cv: ""
