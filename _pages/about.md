@@ -9,7 +9,7 @@ redirect_from:
 ---
 {% assign home = site.data.homepage %}
 <div id="about">
-  <h1 class="main-heading">Hi there! Welcome to my Homepage!</h1>
+  <h1 class="main-heading">Hi there <img class="greeting-wave" src="{{ '/images/Hi.gif' | relative_url }}" alt="Waving hand" width="241" height="234"> Welcome to my Homepage!</h1>
   {% if site.profile_draft %}<p class="draft-notice">Profile in preparation · 个人资料待补充</p>{% endif %}
   {{ home.intro | markdownify }}
   {% if home.research_interests.size > 0 %}<p><strong>Research interests:</strong> {{ home.research_interests | join: ' · ' | escape }}</p>{% endif %}
@@ -26,7 +26,12 @@ redirect_from:
   {% for item in home.experience %}
   <div class="experience-card">
     {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.institution | escape }}" class="experience-logo" loading="lazy">{% endif %}
-    <div class="experience-info"><strong>{{ item.institution | escape }}</strong><br><em>{{ item.date | escape }}</em><br>{{ item.role | escape }}<div class="experience-description">{{ item.description | markdownify }}</div></div>
+    <div class="experience-info">
+      <strong>{{ item.institution | escape }}</strong><br>
+      <em>{{ item.date | escape }}</em><br>
+      <span class="experience-role">{{ item.role | escape }}{% if item.advisor %} advised by <em class="experience-advisor">{{ item.advisor | escape }}</em>{% endif %}</span>
+      <div class="experience-description">{{ item.description | markdownify }}</div>
+    </div>
   </div>
   {% else %}<div class="experience-card empty-copy">Education and research experience will be added here.</div>{% endfor %}
 </div>

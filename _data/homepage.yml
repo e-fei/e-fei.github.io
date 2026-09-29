@@ -8,11 +8,12 @@ research_interests:
   - "Video Generation"
 news: []
 experience:
-  - institution: "Shanghai Jiao Tong University · 上海交通大学"
+  - institution: "Shanghai Jiao Tong University"
     logo: "/images/sjtu-emblem.png"
-    date: "Aug. 2026 – Present"
-    role: "Research Experience"
-    description: "Advisor: **Yanwei Li (李彦玮)**. Research area: video generation."
+    date: "2026.08 – Present"
+    role: "Research"
+    advisor: "Yanwei Li (李彦玮)"
+    description: "Focus on: improving the physical consistency of video generation."
 publications: []
 projects: []
 awards:
