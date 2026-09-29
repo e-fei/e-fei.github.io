@@ -8,10 +8,6 @@
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
-            {% if link.section %}
-              {% assign section_content = site.data.homepage[link.section] %}
-              {% if section_content.size == 0 %}{% continue %}{% endif %}
-            {% endif %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
               {% else %}

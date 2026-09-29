@@ -605,6 +605,8 @@ html { scroll-behavior: smooth; }
 #about, #news, #experience, #publications, #projects { scroll-margin-top: 90px; }
 .draft-notice { color: #7b5353; background: #faf2f2; border-left: 3px solid #ca6f6f; padding: 10px 14px; font-size: 14px; }
 .empty-copy, .experience-description { color: #666; }
+.experience-logo { flex-shrink: 0; border-radius: 0; }
+.experience-info { min-width: 0; }
 .news-list p { display: inline; }
 .publication-card { gap: 20px; padding: 18px; }
 .publication-card[hidden], #no-selected-publications[hidden] { display: none; }

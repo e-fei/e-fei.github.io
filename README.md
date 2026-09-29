@@ -13,7 +13,7 @@
 - `assets/css/home.css`：主页样式。
 
 当前已填写姓名、学校、视频生成研究方向、上海交通大学研究经历及三项竞赛获奖，并允许搜索引擎收录。
-未填写的新闻、论文和项目栏目自动隐藏；在 `_data/homepage.yml` 添加内容后会自动显示。
+新闻、论文和项目栏目即使尚未填写也保留；在 `_data/homepage.yml` 添加内容即可替换占位提示。
 头像目前使用姓名首字母，可在提供个人照片后替换。保留原模板署名，不包含模板原作者的个人经历、照片、论文或联系方式。
 
 ## 部署到 GitHub Pages
@@ -28,3 +28,5 @@
 
 改编自 oplisty/oplisty.github.io 的 WowPage，源自 Academic Pages。
 保留原 MIT 许可证及 Yue Su、Weidong Tang 的版权声明，见 LICENSE。
+
+上海交通大学校徽来自[学校视觉形象识别系统](https://vi.sjtu.edu.cn/index.php/articles/base/1)，使用[官方 PNG 原图](https://vi.sjtu.edu.cn/img/base/Logo.png)，保持原有颜色和比例。

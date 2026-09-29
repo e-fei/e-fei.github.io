@@ -2,13 +2,14 @@
 intro: >-
   I am **Yifei Lu (陆逸霏)** from **South China University of Technology**.
   My research focuses on **video generation**.
-  Since August 2026, I have been conducting research at **Shanghai Jiao Tong University**,
-  supervised by **Yanwei Li (李彦玮)**.
+  I am always happy to exchange ideas and discuss research.
+  Feel free to reach out if you are interested in video generation or potential collaborations!
 research_interests:
   - "Video Generation"
 news: []
 experience:
   - institution: "Shanghai Jiao Tong University · 上海交通大学"
+    logo: "/images/sjtu-emblem.png"
     date: "Aug. 2026 – Present"
     role: "Research Experience"
     description: "Advisor: **Yanwei Li (李彦玮)**. Research area: video generation."
