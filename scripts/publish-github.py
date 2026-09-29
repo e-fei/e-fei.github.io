@@ -40,6 +40,15 @@ run(GH, 'repo', 'create', REPO, '--public', '--description', 'Academic personal 
     '--homepage', 'https://e-fei.github.io')
 run(GH, 'auth', 'setup-git')
 run('git', 'push', '-u', 'origin', 'main')
-run(GH, 'api', '--method', 'POST', 'repos/' + REPO + '/pages',
-    '-f', 'source[branch]=main', '-f', 'source[path]=/')
+pages = subprocess.run([GH, 'api', 'repos/' + REPO + '/pages'],
+                       cwd=ROOT, capture_output=True, text=True)
+if pages.returncode == 0:
+    source = json.loads(pages.stdout).get('source', {})
+    if source != {'branch': 'main', 'path': '/'}:
+        raise SystemExit('Pages is enabled with another source. Review its settings before changing it.')
+elif '(HTTP 404)' in pages.stderr:
+    run(GH, 'api', '--method', 'POST', 'repos/' + REPO + '/pages',
+        '-f', 'source[branch]=main', '-f', 'source[path]=/')
+else:
+    raise SystemExit('Could not verify Pages settings: ' + pages.stderr)
 print('Repository created and Pages build requested. Verify the deployment status before sharing the website.')
